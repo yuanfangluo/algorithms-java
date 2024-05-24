@@ -1,6 +1,6 @@
 package LeetCode.LinkedList;
 
-import LeetCode.Base.ListNode;
+import labuladong.Base.ListNode;
 
 public class LinkedList {
     public static void main(String[] args) {

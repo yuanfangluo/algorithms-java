@@ -1,10 +1,10 @@
 package huawei;
 
-import LeetCode._5_动态规划._3_零一背包问题.零一背包问题;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import labuladong.DP.零一背包问题;
 
 public class 优选核酸检测点 {
 

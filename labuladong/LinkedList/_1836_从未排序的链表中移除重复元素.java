@@ -1,6 +1,7 @@
 package labuladong.LinkedList;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import labuladong.Base.ListNode;
 
@@ -11,13 +12,14 @@ import labuladong.Base.ListNode;
 * */
 public class _1836_从未排序的链表中移除重复元素 {
     public ListNode deleteDuplicatesUnsorted(ListNode head) {
-        HashMap<Integer, Integer> count = new HashMap<>();
+        Map<Integer, Integer> count = new HashMap<>();
         // 先遍历一遍链表，记录每个值出现的次数
         ListNode p = head;
         while (p != null) {
             count.put(p.val, count.getOrDefault(p.val, 0) + 1);
             p = p.next;
         }
+        // 需要创建一个新的链表，使用虚拟头节点
         // 虚拟头结点（哨兵节点），存放结果链表
         ListNode dummy = new ListNode(-1);
         dummy.next = head;

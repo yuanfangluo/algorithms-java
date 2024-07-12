@@ -1,0 +1,61 @@
+package labuladong.手把手刷数据结构.数组.数组双指针经典题;
+
+/*
+* https://leetcode.cn/problems/merge-sorted-array/?show=1
+*
+*
+* */
+public class _88_合并两个有序数组 {
+
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        // 两个指针分别初始化在两个数组的最后一个元素（类似拉链两端的锯齿）
+        int i = m - 1, j = n - 1;
+        // 生成排序的结果
+        int p = nums1.length - 1;
+        // 从后向前生成结果数组，类似合并两个有序链表的逻辑
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                nums1[p] = nums1[i];
+                i--;
+            } else {
+                nums1[p] = nums2[j];
+                j--;
+            }
+            p--;
+        }
+        // 可能其中一个数组的指针走到尽头了，而另一个还没走完
+        // 因为我们本身就是在往 nums1 中放元素，所以只需考虑 nums2 是否剩元素即可
+        while (j >= 0) {
+            nums1[p] = nums2[j];
+            j--;
+            p--;
+        }
+    }
+
+    public void merge11(int[] nums1, int m, int[] nums2, int n){
+        // nums1是长数组，nums2是短数组，需要将nums2的元素移动到nums1中
+        int i = m -1, j = n -1;
+        int p = nums1.length - 1;
+
+        while (i >= 0 && j >= 0) {
+            if (nums2[j] >= nums1[i]) {
+                nums1[p] = nums2[j];
+                p--;
+                j--;
+            } else {
+                nums1[p] = nums1[i];
+                p--;
+                i--;
+            }
+        }
+
+        // 有肯能nums2还有元素
+        while (j >= 0) {
+            nums1[p] = nums2[j];
+            p--;
+            j--;
+        }
+
+    }
+
+}

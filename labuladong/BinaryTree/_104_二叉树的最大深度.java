@@ -9,7 +9,7 @@ import labuladong.Base.TreeNode;
 public class _104_二叉树的最大深度 {
     // 记录当前递归到的节点深度
     int depth = 0;
-    // 最大深度
+    // 记录最大深度
     int res = 0;
 
     // 思路一：遍历一遍二叉树得到答案

@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class 最多提取子串数目 {
     /*
-    *
-    * badc
-    * bac
-    *
-    * */
+     *
+     * badc
+     * bac
+     *
+     */
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)){
+        try (Scanner scanner = new Scanner(System.in)) {
             String a = scanner.nextLine();
             String b = scanner.nextLine();
             int res = solution(a, b);
@@ -20,13 +20,13 @@ public class 最多提取子串数目 {
 
     private static int solution(String a, String b) {
         int count = 0;
-        while (true){
+        while (true) {
             char[] chars = b.toCharArray();
             int last = 0;
-            for (char c: chars) {
+            for (char c : chars) {
                 int index = a.indexOf(c, last);
                 last = index;
-                if (index != -1){
+                if (index != -1) {
                     a = a.replaceFirst(c + "", "_");
                 } else {
                     return count;
@@ -36,8 +36,7 @@ public class 最多提取子串数目 {
         }
     }
 
-
-        private static int solution1(String a, String b) {
+    private static int solution1(String a, String b) {
         char[] charsA = a.toCharArray();
         char[] charsB = b.toCharArray();
         int[] indexes = new int[b.length()];
@@ -47,7 +46,7 @@ public class 最多提取子串数目 {
         while (found) {
             for (int i = 0; i < charsB.length; i++) {
                 int pos = a.indexOf(charsB[i], i == 0 ? 0 : indexes[i - 1]);
-                if (pos != -1){
+                if (pos != -1) {
                     indexes[i] = pos;
                 } else {
                     found = false;
@@ -56,7 +55,7 @@ public class 最多提取子串数目 {
             }
 
             if (found) {
-                for (int index: indexes) {
+                for (int index : indexes) {
                     charsA[index] = '-';
                     a = new String(charsA);
                 }

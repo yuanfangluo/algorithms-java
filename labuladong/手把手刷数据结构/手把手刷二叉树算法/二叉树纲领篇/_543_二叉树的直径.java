@@ -33,12 +33,14 @@ public class _543_二叉树的直径 {
             traverse(root.right);
         }
 
+        // 计算二叉树的最大深度
         int maxDepth(TreeNode root) {
             if (root == null) {
                 return 0;
             }
             int leftMax = maxDepth(root.left);
             int rightMax = maxDepth(root.right);
+
             return 1 + Math.max(leftMax, rightMax);
         }
     }

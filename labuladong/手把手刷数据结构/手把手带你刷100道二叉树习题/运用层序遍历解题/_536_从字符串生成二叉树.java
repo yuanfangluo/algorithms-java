@@ -1,8 +1,6 @@
 package labuladong.手把手刷数据结构.手把手带你刷100道二叉树习题.运用层序遍历解题;
 
 import java.util.Stack;
-
-import LeetCode.LinkedList.LinkedList;
 import labuladong.Base.TreeNode;
 
 // https://leetcode.cn/problems/construct-binary-tree-from-string/

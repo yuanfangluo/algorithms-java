@@ -1,11 +1,10 @@
 package labuladong.手把手刷数据结构.手把手刷数组算法.前缀和技巧经典题.前缀和;
-import labuladong.Array.NumMatrix;
+import labuladong.other.NumMatrix;
 /*
 * https://leetcode.cn/problems/matrix-block-sum/
 *
 * */
 public class _1314_矩阵区域和 {
-
     public int[][] matrixBlockSum(int[][] mat, int k) {
         int m = mat.length, n = mat[0].length;
         NumMatrix numMatrix = new NumMatrix(mat);

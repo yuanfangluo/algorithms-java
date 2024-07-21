@@ -2,39 +2,39 @@ package labuladong.手把手刷数据结构.手把手刷数组算法.一个方�
 
 import java.util.*;
 
-/*
-* https://leetcode.cn/problems/two-sum/description/
-*
-* */
+// https://leetcode.cn/problems/two-sum/description/
 public class _1_两数之和 {
-
-    public int[] twoSum1(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            Integer index = map.get(target - nums[i]);
-            if (index != null) return new int[]{index, i};
-            map.put(nums[i], i);
+    class Solution1 {
+        public int[] twoSum(int[] nums, int target) {
+            Map<Integer, Integer> map = new HashMap<>();
+            for (int i = 0; i < nums.length; i++) {
+                Integer index = map.get(target - nums[i]);
+                if (index != null) return new int[]{index, i};
+                map.put(nums[i], i);
+            }
+            return null;
         }
-        return null;
     }
 
-    public int[] twoSum2(int[] nums, int target) {
-        // 先对数组排序
-        Arrays.sort(nums);
-        // 左右指针
-        int lo = 0, hi = nums.length - 1;
-        while (lo < hi) {
-            int sum = nums[lo] + nums[hi];
-            // 根据 sum 和 target 的比较，移动左右指针
-            if (sum < target) {
-                lo++;
-            } else if (sum > target) {
-                hi--;
-            } else if (sum == target) {
-                return new int[] { nums[lo], nums[hi] };
+    class Solution2 {
+        public int[] twoSum(int[] nums, int target) {
+            // 先对数组排序
+            Arrays.sort(nums);
+            // 左右指针
+            int lo = 0, hi = nums.length - 1;
+            while (lo < hi) {
+                int sum = nums[lo] + nums[hi];
+                // 根据 sum 和 target 的比较，移动左右指针
+                if (sum < target) {
+                    lo++;
+                } else if (sum > target) {
+                    hi--;
+                } else if (sum == target) {
+                    return new int[] { nums[lo], nums[hi] };
+                }
             }
+            return new int[] {};
         }
-        return new int[] {};
     }
 
     // 泛化一下，求两数之和的元素，不是索引

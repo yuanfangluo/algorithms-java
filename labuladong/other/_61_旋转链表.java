@@ -13,14 +13,11 @@ public class _61_旋转链表 {
             n++;
             head = head.next;
         }
-
         // 再对k求模运算
         k = k % n;
-
         // 先将整个链表反转
         ListNode newHead = reverseList(head);
-        
-        return null;
+        return newHead;
     }
 
     public ListNode reverseList(ListNode head) {
@@ -33,6 +30,5 @@ public class _61_旋转链表 {
         }
         return pre;
     }
-
 
 }

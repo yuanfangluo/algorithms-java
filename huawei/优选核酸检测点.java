@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import labuladong.other.零一背包问题;
+import Algorithms.other.零一背包问题;
 
 public class 优选核酸检测点 {
 

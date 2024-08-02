@@ -1,18 +1,14 @@
 package Algorithms.经典数据结构算法.手把手刷数组算法.前缀和数组.一维数组中的前缀和;
 
-/*
-* https://leetcode.cn/problems/range-sum-query-immutable/
-*
-* */
+// https://leetcode.cn/problems/range-sum-query-immutable/
 public class _303_区域和检索_数组不可变 {
-
     class NumArray {
         private int[] preSum;
 
         public NumArray(int[] nums) {
             // preSum[i] 代表 nums[0]+...+nums[i-1]
             preSum = new int[nums.length + 1];
-            
+
             // 计算 nums 的累加和
             for (int i = 1; i < preSum.length; i++) {
                 preSum[i] = preSum[i - 1] + nums[i - 1];
@@ -21,6 +17,11 @@ public class _303_区域和检索_数组不可变 {
 
         // 查询闭区间 [left, right] 的累加和
         public int sumRange(int left, int right) {
+            // 这里将 preSum[right + 1] 减去 preSum[left]，
+            // 就可以得到累加和，即 nums[left] +... + nums[right]
+            // 因为 preSum[left] 代表 nums[0]+...+nums[left-1]，
+            // 而 preSum[right + 1] 代表 nums[0]+...+nums[right]
+            // 所以 preSum[right + 1] - preSum[left] 就代表 nums[left] +...+nums[right]
             return preSum[right + 1] - preSum[left];
         }
     }

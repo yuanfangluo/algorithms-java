@@ -7,7 +7,6 @@ import java.util.List;
 public class _52_N皇后_II {
     class Solution {
         int res = 0;
-
         public int totalNQueens(int n) {
             // '.' 表示空，'Q' 表示皇后，初始化空棋盘
             List<String> board = new ArrayList<>();

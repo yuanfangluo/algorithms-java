@@ -15,18 +15,17 @@ public class _76_最小覆盖子串 {
     /*
     * s是大串，t是小串
     * */
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     public String minWindow(String s, String t) {
         char[] ss = s.toCharArray();
         char[] ts = t.toCharArray();
         // 1. 首先初始化两个哈希表
         // need记录需要凑齐的字符
-        Map<Character, Integer> need = new HashMap();
+        Map<Character, Integer> need = new HashMap<>();
         for (Character c: ts ) {
             need.put(c, need.getOrDefault(c, 0) + 1);
         }
         // window记录窗口中的字符
-        Map<Character, Integer> window = new HashMap();
+        Map<Character, Integer> window = new HashMap<>();
 
         int left = 0, right = 0;
         // 表示window中某个字符的个数满足need中该字符的个数的这种情况的数量

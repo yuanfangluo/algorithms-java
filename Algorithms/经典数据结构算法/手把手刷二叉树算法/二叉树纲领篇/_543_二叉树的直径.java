@@ -5,11 +5,11 @@ import Algorithms.Base.TreeNode;
 // https://leetcode.cn/problems/diameter-of-binary-tree/
 // 每一条二叉树的「直径」长度，就是一个节点的左右子树的最大深度之和
 public class _543_二叉树的直径 {
+    // 解法一：对每个节点计算直径，求最大直径，思路清晰，但是有冗余
     class Solution1 {
         // 记录最大直径的长度
         int maxDiameter = 0;
 
-        // 解法一：对每个节点计算直径，求最大直径，思路清晰，但是有冗余
         public int diameterOfBinaryTree(TreeNode root) {
             traverse(root);
             return maxDiameter;
@@ -33,24 +33,23 @@ public class _543_二叉树的直径 {
             traverse(root.right);
         }
 
-        // 计算二叉树的最大深度
+        // 给你一个节点，计算以此为根节点的二叉树的最大深度
         int maxDepth(TreeNode root) {
             if (root == null) {
                 return 0;
             }
             int leftMax = maxDepth(root.left);
             int rightMax = maxDepth(root.right);
-
             return 1 + Math.max(leftMax, rightMax);
         }
     }
 
-    // 解法二：对每个节点计算直径，求最大直径，思路清晰，但是有冗余
+    // 解法二：在后序位置
     class Solution2 {
         // 记录最大直径的长度
         int maxDiameter = 0;
 
-        public int diameterOfBinaryTree2(TreeNode root) {
+        public int diameterOfBinaryTree(TreeNode root) {
             maxDepth(root);
             return maxDiameter;
         }

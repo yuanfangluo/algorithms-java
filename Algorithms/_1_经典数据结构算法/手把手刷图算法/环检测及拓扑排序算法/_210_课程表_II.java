@@ -9,16 +9,25 @@ import java.util.Queue;
 // https://leetcode.cn/problems/course-schedule-ii/
 
 public class _210_课程表_II {
+    // 什么是拓扑排序？用来干嘛？
+    // 拓扑排序用来处理依赖关系，可以生成依赖结果
+
     // 分析流程
     // 我们先判断一下题目输入的课程依赖是否成环，成环的话是无法进行拓扑排序的，所以我们可以复用上一道题的主函数
+
+    // 上课的顺序使用拓扑排序，使用拓扑排序之前需要判断是否有环
+
     // 如何进行拓扑排序？
     // 将后序遍历的结果进行反转，就是拓扑排序的结果
-    // 代码虽然看起来多，但是逻辑应该是很清楚的，
+
     // 只要图中无环，那么我们就调用 traverse 函数对图进行 DFS 遍历，记录后序遍历结果，
     // 最后把后序遍历结果反转，作为最终的答案
+
     // 那么为什么后序遍历的反转结果就是拓扑排序呢？
+
     // 二叉树的后序遍历是什么时候？
     // 遍历完左右子树之后才会执行后序遍历位置的代码。
+
     // 换句话说，当左右子树的节点都被装到结果列表里面了，根节点才会被装进去。
     // 后序遍历的这一特点很重要，之所以拓扑排序的基础是后序遍历，是因为一个任务必须等到它依赖的所有任务都完成之后才能开始开始执行。
 
@@ -44,8 +53,12 @@ public class _210_课程表_II {
             if (hasCycle) {
                 return new int[] {};
             }
+
+            // 无环图进行拓扑排序
             // 逆后序遍历结果即为拓扑排序结果
             Collections.reverse(postorder);
+
+            // 注意：这里需要将 List<Integer> 转换为 int[] 类型
             int[] res = new int[numCourses];
             for (int i = 0; i < numCourses; i++) {
                 res[i] = postorder.get(i);
@@ -96,6 +109,7 @@ public class _210_课程表_II {
         public int[] findOrder(int numCourses, int[][] prerequisites) {
             // 建图，和环检测算法相同
             List<Integer>[] graph = buildGraph(numCourses, prerequisites);
+
             // 计算入度，和环检测算法相同
             int[] indegree = new int[numCourses];
             for (int[] edge : prerequisites) {
@@ -107,22 +121,35 @@ public class _210_课程表_II {
             Queue<Integer> q = new LinkedList<>();
             for (int i = 0; i < numCourses; i++) {
                 if (indegree[i] == 0) {
+                    // 入度为 0 的节点，即没有任何课程依赖它，那么就可以作为起点
+                    // 因为它没有任何依赖，所以不需要等待其他课程
+                    // 所以入度为 0 的节点，它就可以作为起点
                     q.offer(i);
                 }
             }
 
             // 记录拓扑排序结果
             int[] res = new int[numCourses];
+
             // 记录遍历节点的顺序（索引）
             int count = 0;
+
             // 开始执行 BFS 算法
             while (!q.isEmpty()) {
                 int cur = q.poll();
+
                 // 弹出节点的顺序即为拓扑排序结果
                 res[count] = cur;
+
                 count++;
                 for (int next : graph[cur]) {
+                    // 遍历 next 节点的所有相邻节点
+                    // 并将 next 的入度减 1
+                    // 因为 cur 依赖 next，所以 next 的入度 -1
+                    // 如果 next 的入度为 0，那么就可以作为新的起点，加入队列
                     indegree[next]--;
+                    // 如果 next 的入度为 0，说明 next 依赖的所有课程已经完成，
+                    // 那么 next 就可以作为新的起点，继续执行 BFS 算法
                     if (indegree[next] == 0) {
                         q.offer(next);
                     }

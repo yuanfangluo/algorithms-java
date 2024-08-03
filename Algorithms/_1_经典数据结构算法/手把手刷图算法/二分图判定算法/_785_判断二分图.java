@@ -34,7 +34,6 @@ public class _785_判断二分图 {
             // 因为图不一定是联通的，可能存在多个子图
             // 所以要把每个节点都作为起点进行一次遍历
             // 如果发现任何一个子图不是二分图，整幅图都不算二分图
-
             for (int v = 0; v < n; v++) {
                 if (!visited[v]) {
                     traverse(graph, v);
@@ -89,7 +88,7 @@ public class _785_判断二分图 {
                     bfs(graph, v);
                 }
             }
-
+            
             return ok;
         }
 

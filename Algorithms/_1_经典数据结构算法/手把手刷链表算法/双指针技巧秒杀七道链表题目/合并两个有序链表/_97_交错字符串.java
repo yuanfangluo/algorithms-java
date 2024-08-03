@@ -1,9 +1,9 @@
-package Algorithms.other;
+package Algorithms._1_经典数据结构算法.手把手刷链表算法.双指针技巧秒杀七道链表题目.合并两个有序链表;
 
 import java.util.Arrays;
 
 /*
-* https://leetcode.cn/problems/interleaving-string/?show=1
+* https://leetcode.cn/problems/interleaving-string/
 *
 * 如果你看过前文 单链表六大解题套路 中讲解的 21. 合并两个有序链表 就会发现，
 * 题目巴拉巴拉说了一大堆，实则就是一个使用双指针技巧合并两个字符串的过程

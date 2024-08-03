@@ -1,4 +1,4 @@
-package Algorithms.other;
+package Algorithms._1_经典数据结构算法.手把手刷数组算法.滑动窗口算法经典习题;
 /*
 * https://leetcode.cn/problems/minimum-size-subarray-sum/?show=1
 *

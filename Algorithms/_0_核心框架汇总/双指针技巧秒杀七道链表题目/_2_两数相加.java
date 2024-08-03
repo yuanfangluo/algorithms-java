@@ -1,9 +1,8 @@
-package Algorithms.other;
+package Algorithms._0_核心框架汇总.双指针技巧秒杀七道链表题目;
 
 import Algorithms.Base.ListNode;
 
 // https://leetcode.cn/problems/add-two-numbers/
-
 public class _2_两数相加 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 在两条链表上的指针

@@ -15,6 +15,7 @@ public class _886_可能的二分法 {
             // 图节点编号从 1 开始
             color = new boolean[n + 1];
             visited = new boolean[n + 1];
+
             // 转化成邻接表表示图结构
             List<Integer>[] graph = buildGraph(n, dislikes);
 
@@ -48,8 +49,9 @@ public class _886_可能的二分法 {
         }
 
         private void traverse(List<Integer>[] graph, int v) {
-            if (!ok)
+            if (!ok) {
                 return;
+            }
             visited[v] = true;
             for (int w : graph[v]) {
                 if (!visited[w]) {

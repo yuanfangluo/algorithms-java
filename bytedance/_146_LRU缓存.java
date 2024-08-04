@@ -1,5 +1,3 @@
-package Algorithms.经典数据结构算法.手把手设计数据结构.LRU算法;
-
 import java.util.LinkedHashMap;
 
 // https://leetcode.cn/problems/lru-cache/

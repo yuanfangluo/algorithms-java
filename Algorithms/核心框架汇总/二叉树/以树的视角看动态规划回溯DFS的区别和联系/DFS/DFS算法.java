@@ -1,5 +1,7 @@
 package Algorithms.核心框架汇总.二叉树.以树的视角看动态规划回溯DFS的区别和联系.DFS;
 
+import Algorithms.Base.Node;
+
 public class DFS算法 {
     // DFS 算法核心逻辑
     void dfs(int[][] grid, int i, int j) {
@@ -22,11 +24,12 @@ public class DFS算法 {
     void dfs(Node root) {
     if (root == null) return;
     // 做选择
-    print("我已经进入节点 %s 啦", root)
+    System.out.println("我将要进入节点 %s 的子节点啦");
     for (Node child : root.children) {
         dfs(child);
     }
     // 撤销选择
-    print("我将要离开节点 %s 啦", root)
+    System.out.println("我将要离开节点 %s 的子节点啦");
+
 }
 }

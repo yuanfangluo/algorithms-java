@@ -1,4 +1,4 @@
-package Algorithms.经典数据结构算法.手把手刷数组算法.一个方法团灭nSum问题.N数之和;
+package N数之和;
 
 import java.util.ArrayList;
 import java.util.List;

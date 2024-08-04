@@ -43,8 +43,8 @@ public class _104_二叉树的最大深度 {
                 return 0;
             }
             // 利用定义，计算左右子树的最大深度
-            int leftMax = maxDepth2(root.left);
-            int rightMax = maxDepth2(root.right);
+            int leftMax = maxDepth(root.left);
+            int rightMax = maxDepth(root.right);
 
             // 根据左右子树的最大深度推出原二叉树的最大深度
             // 再加上根节点自己

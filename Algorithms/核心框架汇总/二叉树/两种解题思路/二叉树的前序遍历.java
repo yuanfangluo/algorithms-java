@@ -3,6 +3,8 @@ package Algorithms.核心框架汇总.二叉树.两种解题思路;
 import java.util.LinkedList;
 import java.util.List;
 
+import Algorithms.Base.TreeNode;
+
 public class 二叉树的前序遍历 {
     // 遍历思路
     class Solution1 {

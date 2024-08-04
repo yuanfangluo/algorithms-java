@@ -6,7 +6,7 @@ import Algorithms.Base.TreeNode;
 
 // https://leetcode.cn/problems/path-sum-iii/
 public class _437_路径总和_III {
-    class Solution {
+    class Solution1 {
 
         int pathSum = 0;
         int targetSum;
@@ -52,7 +52,7 @@ public class _437_路径总和_III {
         }
     }
 
-    class Solution {
+    class Solution2 {
         public int pathSum(TreeNode root, long targetSum) {
             if (root == null) {
                 return 0;

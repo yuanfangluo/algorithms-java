@@ -1,4 +1,3 @@
-package bytedance;
 // https://leetcode.cn/problems/trapping-rain-water/?show=1
 public class _42_接雨水 {
     /*

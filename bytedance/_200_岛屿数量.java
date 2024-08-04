@@ -1,5 +1,3 @@
-package Algorithms.经典暴力搜索算法.DFS和回溯算法.岛屿问题;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

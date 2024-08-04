@@ -1,6 +1,10 @@
 package Algorithms.经典数据结构算法.手把手刷数组算法.一个方法团灭nSum问题.两数之和;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 // https://leetcode.cn/problems/two-sum/description/
 public class _1_两数之和 {
     class Solution1 {

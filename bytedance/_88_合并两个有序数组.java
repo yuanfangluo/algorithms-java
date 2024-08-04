@@ -1,4 +1,3 @@
-package Algorithms.经典数据结构算法.手把手刷数组算法.数组双指针经典题;
 
 // https://leetcode.cn/problems/merge-sorted-array/
 public class _88_合并两个有序数组 {

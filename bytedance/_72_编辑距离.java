@@ -1,4 +1,3 @@
-package Algorithms.经典动态规划算法.子序列类型问题.编辑距离;
 
 // https://leetcode.cn/problems/edit-distance/
 public class _72_编辑距离 {

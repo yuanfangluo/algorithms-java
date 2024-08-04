@@ -1,5 +1,11 @@
 package Algorithms.other;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.PriorityQueue;
 
 // https://leetcode.cn/problems/top-k-frequent-elements/
@@ -76,7 +82,7 @@ class TopKFrequent {
         }
     }
 
-    class Solution {
+    class Solution3 {
         public int[] topKFrequent(int[] nums, int k) {
             Map<Integer, Integer> counts = new HashMap<>();
             for (int num : nums) {

@@ -3,6 +3,8 @@ package Algorithms.核心框架汇总.二叉树.层序遍历;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import Algorithms.Base.TreeNode;
+
 public class 层序遍历框架 {
     // 输入一棵二叉树的根节点，层序遍历这棵二叉树
     void levelTraverse(TreeNode root) {

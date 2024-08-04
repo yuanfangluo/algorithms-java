@@ -1,4 +1,3 @@
-package bytedance;
 // https://leetcode.cn/problems/coordinate-with-maximum-network-quality/
 public class _1620_网络信号最好的坐标 {
     class Solution {

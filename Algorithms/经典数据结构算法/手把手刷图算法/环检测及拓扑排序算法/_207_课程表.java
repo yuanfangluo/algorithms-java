@@ -3,6 +3,7 @@ package Algorithms.经典数据结构算法.手把手刷图算法.环检测及�
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 // https://leetcode.cn/problems/course-schedule/
 public class _207_课程表 {
@@ -10,7 +11,8 @@ public class _207_课程表 {
 
     // 分解步骤
     // 1、可以写一个建图函数：
-    // 2、图的dfs算法遍历框架
+    // 2、图的dfs算法遍历框架：
+    // 3、判断是否有环的条件
     class Solution1 {
         // 记录一次递归堆栈中的节点，用来判断环
         boolean[] onPath;
@@ -20,6 +22,9 @@ public class _207_课程表 {
 
         // 记录图中是否有环
         boolean hasCycle = false;
+
+        // 记录遍历过的节点，方便找到有哪些节点在环里面
+        Stack<Integer> path = new Stack<>();
 
         boolean canFinish(int numCourses, int[][] prerequisites) {
             List<Integer>[] graph = buildGraph(numCourses, prerequisites);
@@ -48,12 +53,14 @@ public class _207_课程表 {
             // 前序代码位置
             visited[s] = true;
             onPath[s] = true;
-
+            
+            path.push(s);
             // 递归遍历相邻节点
             for (int t : graph[s]) {
                 traverse(graph, t);
             }
 
+            path.pop();
             // 后序代码位置
             onPath[s] = false;
         }
@@ -81,11 +88,11 @@ public class _207_课程表 {
     // 3、对 BFS 队列进行初始化，将入度为 0 的节点首先装入队列。
     // 4、开始执行 BFS 循环，不断弹出队列中的节点，减少相邻节点的入度，并将入度变为 0 的节点加入队列。
     // 5、如果最终所有节点都被遍历过（count 等于节点数），则说明不存在环，反之则说明存在环。
-    
     class Solution2 {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         // 建图，有向边代表「被依赖」关系
         List<Integer>[] graph = buildGraph(numCourses, prerequisites);
+
         // 构建入度数组
         int[] indegree = new int[numCourses];
         for (int[] edge : prerequisites) {
@@ -100,6 +107,7 @@ public class _207_课程表 {
             if (indegree[i] == 0) {
                 // 节点 i 没有入度，即没有依赖的节点
                 // 可以作为拓扑排序的起点，加入队列
+                // 入度为 0 的节点首先被加入队列
                 q.offer(i);
             }
         }

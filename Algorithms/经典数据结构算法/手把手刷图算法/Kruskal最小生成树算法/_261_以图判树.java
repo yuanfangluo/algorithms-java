@@ -5,6 +5,7 @@ import Algorithms.Base.UF;
 // https://leetcode.cn/problems/graph-valid-tree/
 public class _261_以图判树 {
     // 对于这道题，我们可以思考一下，什么情况下加入一条边会使得树变成图（出现环）？
+    // 总结一下规律就是：
     // 对于添加的这条边，如果该边的两个节点本来就在同一连通分量里，那么添加这条边会产生环；
     // 反之，如果该边的两个节点不在同一连通分量里，则添加这条边不会产生环。
 
@@ -19,13 +20,16 @@ public class _261_以图判树 {
             for (int[] edge : edges) {
                 int u = edge[0];
                 int v = edge[1];
+
                 // 若两个节点已经在同一连通分量中，会产生环
                 if (uf.connected(u, v)) {
                     return false;
                 }
+
                 // 这条边不会产生环，可以是树的一部分
                 uf.union(u, v);
             }
+            
             // 要保证最后只形成了一棵树，即只有一个连通分量
             return uf.count() == 1;
         }

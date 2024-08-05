@@ -62,7 +62,6 @@ public class 遍历所有节点 {
     // 基于邻接表/邻接矩阵的图遍历代码
     class Solution3 {
         Graph graph;
-
         // 遍历图的所有节点
         boolean[] visited = new boolean[graph.size()];
 

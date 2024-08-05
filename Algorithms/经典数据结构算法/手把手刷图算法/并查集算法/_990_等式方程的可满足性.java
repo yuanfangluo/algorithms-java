@@ -4,6 +4,7 @@ import Algorithms.Base.UF;
 
 // https://leetcode.cn/problems/satisfiability-of-equality-equations/
 public class _990_等式方程的可满足性 {
+    // 动态连通性其实就是一种等价关系，具有「自反性」「传递性」和「对称性」，其实 == 关系也是一种等价关系，具有这些性质。
     // 将 equations 中的算式根据 == 和 != 分成两部分，先处理 == 算式，使得他们通过相等关系各自勾结成门派（连通分量）；
     // 然后处理 != 算式，检查不等关系是否破坏了相等关系的连通性。
     class Solution {

@@ -5,18 +5,7 @@ import java.util.Queue;
 
 // https://leetcode.cn/problems/is-graph-bipartite/
 public class _785_判断二分图 {
-    // 现实生活中二分图解决了什么问题？
-    // 二分图结构在某些场景可以更高效地存储数据
-    // 例如电影和演员的关系
-
-    // 二分图判定思路
-    // 判定二分图的算法很简单，就是用代码解决「双色问题」。
-    // 说白了就是遍历一遍图，一边遍历一边染色，看看能不能用两种颜色给所有节点染色，且相邻节点的颜色都不相同。
-
-    // 既然说到遍历图，也不涉及最短路径之类的，当然是 DFS 算法和 BFS 皆可了，
-    // DFS 算法相对更常用些，所以我们先来看看如何用 DFS 算法判定双色图。
-    // 结合之前的代码框架，我们可以额外使用一个 color 数组来记录每个节点的颜色
-
+    // 使用DFS来解决
     class Solution1 {
         // 记录图是否符合二分图性质
         private boolean ok = true;
@@ -25,12 +14,11 @@ public class _785_判断二分图 {
         // 记录图中节点是否被访问过
         private boolean[] visited;
 
-        // 主函数，输入邻接表，判断是否是二分图
+        // 输入邻接表，判断是否是二分图
         public boolean isBipartite(int[][] graph) {
             int n = graph.length;
             color = new boolean[n];
             visited = new boolean[n];
-
             // 因为图不一定是联通的，可能存在多个子图
             // 所以要把每个节点都作为起点进行一次遍历
             // 如果发现任何一个子图不是二分图，整幅图都不算二分图
@@ -76,7 +64,6 @@ public class _785_判断二分图 {
         private boolean[] visited;
         // 记录图中节点的颜色，false 和 true 代表两种不同颜色
         private boolean[] color;
-
         public boolean isBipartite(int[][] graph) {
             int n = graph.length;
             color = new boolean[n];
@@ -88,7 +75,6 @@ public class _785_判断二分图 {
                     bfs(graph, v);
                 }
             }
-            
             return ok;
         }
 

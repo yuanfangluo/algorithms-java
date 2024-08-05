@@ -11,7 +11,7 @@ public class _130_被围绕的区域 {
 
     // 二维坐标 (x,y) 可以转换成 x * n + y 这个数（m 是棋盘的行数，n 是棋盘的列数），
     // 敲黑板，这是将二维坐标映射到一维的常用技巧。
-
+    
     class Solution {
         void solve(char[][] board) {
             if (board.length == 0)

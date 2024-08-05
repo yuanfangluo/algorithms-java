@@ -17,10 +17,12 @@ public class _1584_连接所有点的最小费用 {
 
             // 生成所有边及权重
             List<int[]> edges = new ArrayList<>();
+            // 计算俩俩点之间的曼哈顿距离，其中i，j代表点在数组中的索引
             for (int i = 0; i < n; i++) {
                 for (int j = i + 1; j < n; j++) {
                     int xi = points[i][0], yi = points[i][1];
                     int xj = points[j][0], yj = points[j][1];
+
                     // 用坐标点在 points 中的索引表示坐标点
                     edges.add(new int[] {
                             i, j, Math.abs(xi - xj) + Math.abs(yi - yj)

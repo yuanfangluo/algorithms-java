@@ -31,7 +31,7 @@ public class 二叉树的层序遍历框架 {
     }
 
     class Solution2 {
-
+        
         public static void main(String[] args) {
             TreeNode root = new TreeNode(-1);
             levelOrderTraverse(root);

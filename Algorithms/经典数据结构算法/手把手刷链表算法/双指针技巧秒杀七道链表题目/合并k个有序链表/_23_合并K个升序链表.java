@@ -1,7 +1,6 @@
 package Algorithms.经典数据结构算法.手把手刷链表算法.双指针技巧秒杀七道链表题目.合并k个有序链表;
 
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 import Algorithms.Base.ListNode;
 

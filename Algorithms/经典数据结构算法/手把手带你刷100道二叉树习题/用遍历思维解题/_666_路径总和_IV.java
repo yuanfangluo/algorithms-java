@@ -1,7 +1,5 @@
 package Algorithms.经典数据结构算法.手把手带你刷100道二叉树习题.用遍历思维解题;
 
-import static java.lang.StringTemplate.STR;
-
 import java.util.HashMap;
 
 // https://leetcode.cn/problems/path-sum-iv/

@@ -1,5 +1,8 @@
 package Algorithms.经典数据结构算法.手把手刷图算法.Prim最小生成树算法;
 
+import java.util.List;
+import java.util.PriorityQueue;
+
 public class Prim {
     // 核心数据结构，存储「横切边」的优先级队列
     private PriorityQueue<int[]> pq;

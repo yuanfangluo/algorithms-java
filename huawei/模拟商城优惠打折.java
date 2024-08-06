@@ -1,7 +1,6 @@
 package huawei;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class 模拟商城优惠打折 {

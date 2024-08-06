@@ -34,7 +34,9 @@ public class DoublyListNode {
         DoublyListNode tail = null;
         // 从尾遍历
         for (DoublyListNode p = tail; p != null; p = p.prev) {
-            System.out.println(tail.val);
+            if (tail != null) {
+                System.out.println(tail.val);
+            }
         }
     }
 

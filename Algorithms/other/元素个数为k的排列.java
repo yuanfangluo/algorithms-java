@@ -10,7 +10,7 @@ public class 元素个数为k的排列 {
     void backtrack(int[] nums, LinkedList<Integer> track, int k) {
         // 触发结束条件
         if (track.size() == k) { // 相当于在第k层的排列
-            res.add(new LinkedList(track));
+            res.add(new LinkedList<>(track));
             return;
         }
 

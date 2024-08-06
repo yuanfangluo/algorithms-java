@@ -2,7 +2,7 @@ package Algorithms.经典数据结构算法.手把手刷二叉树算法.快速�
 
 import java.util.Arrays;
 
-public class 框架代码 {
+public class 框架 {
     // 归并排序：先把左半边数组排好序，再把右半边数组排好序，然后把两半数组合并。
     // 快速排序是先将一个元素排好序，然后再将剩下的元素排好序。
     // 理想的总时间复杂度为 O(NlogN)

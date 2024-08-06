@@ -1,6 +1,5 @@
 package huawei;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class 最快到达医院 {

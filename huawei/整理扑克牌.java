@@ -1,6 +1,5 @@
 package huawei;
 
-import javax.swing.*;
 import java.util.*;
 
 public class 整理扑克牌 {

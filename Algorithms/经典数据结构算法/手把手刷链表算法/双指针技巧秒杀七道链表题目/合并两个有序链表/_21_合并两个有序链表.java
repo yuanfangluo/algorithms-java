@@ -2,10 +2,7 @@ package Algorithms.经典数据结构算法.手把手刷链表算法.双指针�
 
 import Algorithms.Base.ListNode;
 
-/*
-* https://leetcode.cn/problems/merge-two-sorted-lists/
-*
-* */
+// https://leetcode.cn/problems/merge-two-sorted-lists/
 public class _21_合并两个有序链表 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // 虚拟头结点

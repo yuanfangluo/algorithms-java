@@ -2,10 +2,7 @@ package Algorithms.经典数据结构算法.手把手刷链表算法.递归反�
 
 import Algorithms.Base.ListNode;
 
-/*
-* https://leetcode.cn/problems/reverse-linked-list/description/
-*
-* */
+// https://leetcode.cn/problems/reverse-linked-list/description/
 public class _206_反转链表 {
     // 思路一：迭代
     public ListNode reverseList1(ListNode head) {

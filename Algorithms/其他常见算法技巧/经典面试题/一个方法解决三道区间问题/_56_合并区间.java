@@ -13,7 +13,9 @@ public class _56_合并区间 {
             if (intervals == null || intervals.length == 0)
                 return new int[][] {};
             // 按区间的 start 升序排列
-            Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+            Arrays.sort(intervals, (a, b) -> {
+                return a[0] - b[0];
+            });
 
             List<int[]> res = new ArrayList<>();
             res.add(intervals[0]);

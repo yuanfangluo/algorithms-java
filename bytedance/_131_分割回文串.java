@@ -1,5 +1,3 @@
-package Algorithms.经典暴力搜索算法.DFS和回溯算法.回溯算法经典习题;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

@@ -1,7 +1,4 @@
-package Algorithms.经典数据结构算法.手把手刷链表算法.递归反转单链表;
-
 import Algorithms.Base.ListNode;
-
 // https://leetcode.cn/problems/reverse-linked-list/
 public class _206_反转链表 {
     // 思路一：迭代

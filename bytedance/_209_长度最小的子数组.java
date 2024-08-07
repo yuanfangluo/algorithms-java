@@ -1,5 +1,3 @@
-package Algorithms.经典数据结构算法.手把手刷数组算法.滑动窗口算法经典习题;
-
 // https://leetcode.cn/problems/minimum-size-subarray-sum/?show=1
 public class _209_长度最小的子数组 {
     class Solution {

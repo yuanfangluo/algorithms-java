@@ -1,5 +1,3 @@
-package Algorithms.经典数据结构算法.手把手刷数组算法.二维数组的花式遍历技巧.矩阵的螺旋遍历;
-
 // https://leetcode.cn/problems/spiral-matrix-ii/description/
 public class _59_螺旋矩阵_II {
     int[][] generateMatrix(int n) {

@@ -18,6 +18,23 @@ public class _92_反转链表_II {
             return head;
         }
 
+        ListNode reverseList(ListNode head) {
+            // 递归函数要有 base case
+            // 意思是如果链表为空或者只有一个节点的时候，反转结果就是它自己，直接返回即可
+            if (head == null || head.next == null) {
+                return head;
+            }
+
+            // 递归调用
+            // 先反转后面的节点 head.next 为 newHead
+            // 再将 head 节点和 newHead 节点连起来
+            ListNode last = reverseList(head.next);
+            head.next.next = head;
+            head.next = null;
+            return last;
+        }
+
+
         ListNode successor = null; // 后驱节点
 
         // 将链表的前 n 个节点反转（n <= 链表长度，反转以 head 为起点的 n 个节点，返回新的头结点

@@ -44,6 +44,7 @@ public class _146_LRU缓存 {
 
             if (cache.size() >= this.cap) {
                 // 链表头部就是最久未使用的 key
+                // 获取链表头部的key
                 int oldestKey = cache.keySet().iterator().next();
                 cache.remove(oldestKey);
             }

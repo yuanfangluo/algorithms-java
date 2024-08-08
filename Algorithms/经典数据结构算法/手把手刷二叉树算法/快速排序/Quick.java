@@ -6,6 +6,7 @@ public class Quick {
     public void sort(int[] nums) {
         // 为了避免出现耗时的极端情况，先随机打乱
         shuffle(nums);
+        
         // 排序整个数组（原地修改）
         sort(nums, 0, nums.length - 1);
     }
@@ -35,7 +36,7 @@ public class Quick {
             while (i < hi && nums[i] <= pivot) {
                 i++;
             }
-            
+
             while (j > lo && nums[j] > pivot) {
                 j--;
             }

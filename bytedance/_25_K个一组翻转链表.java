@@ -1,7 +1,4 @@
-package Algorithms.经典数据结构算法.手把手刷链表算法.K个一组反转链表;
-
 import Algorithms.Base.ListNode;
-
 // https://leetcode.cn/problems/reverse-nodes-in-k-group/description/
 public class _25_K个一组翻转链表 {
     // 整体思路：

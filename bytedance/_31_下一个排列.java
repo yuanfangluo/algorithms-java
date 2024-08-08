@@ -1,4 +1,3 @@
-
 // https://leetcode.cn/problems/next-permutation/
 public class _31_下一个排列 {
     class Solution {

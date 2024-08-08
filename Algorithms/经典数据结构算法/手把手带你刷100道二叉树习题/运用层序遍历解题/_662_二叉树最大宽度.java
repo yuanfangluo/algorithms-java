@@ -9,7 +9,7 @@ import Algorithms.Base.TreeNode;
 // https://leetcode.cn/problems/maximum-width-of-binary-tree/
 public class _662_二叉树最大宽度 {
     // 层序遍历思路
-    class Solution {
+    class Solution1 {
         // 记录节点和对应编号
         class Pair {
             TreeNode node;
@@ -34,6 +34,7 @@ public class _662_二叉树最大宽度 {
             while (!q.isEmpty()) {
                 int sz = q.size();
                 int start = 0, end = 0;
+                
                 // 从左到右遍历每一行
                 for (int i = 0; i < sz; i++) {
                     Pair cur = q.poll();
@@ -46,6 +47,7 @@ public class _662_二叉树最大宽度 {
                     if (i == sz - 1) {
                         end = curId;
                     }
+
                     // 左右子节点入队，同时记录对应节点的编号
                     if (curNode.left != null) {
                         q.offer(new Pair(curNode.left, curId * 2));

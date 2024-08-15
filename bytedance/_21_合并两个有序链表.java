@@ -1,7 +1,4 @@
-package Algorithms.核心框架汇总.双指针技巧秒杀七道链表题目.合并两个有序链表;
-
 import Algorithms.Base.ListNode;
-
 // https://leetcode.cn/problems/merge-two-sorted-lists/
 public class _21_合并两个有序链表 {
     class Solution {

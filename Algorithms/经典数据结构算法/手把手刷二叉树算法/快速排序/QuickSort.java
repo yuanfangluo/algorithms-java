@@ -2,7 +2,7 @@ package Algorithms.经典数据结构算法.手把手刷二叉树算法.快速�
 
 import java.util.Random;
 
-public class Quick {
+public class QuickSort {
     public void sort(int[] nums) {
         // 为了避免出现耗时的极端情况，先随机打乱
         shuffle(nums);

@@ -1,5 +1,3 @@
-package Algorithms.其他常见算法技巧.经典面试题.如何高效解决接雨水问题;
-
 // https://leetcode.cn/problems/container-with-most-water/
 public class _11_盛最多水的容器 {
     // min(height[left], height[right]) * (right - left)

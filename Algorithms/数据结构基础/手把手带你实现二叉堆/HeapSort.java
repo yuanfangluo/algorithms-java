@@ -5,7 +5,7 @@ public class HeapSort {
     // 时间复杂度 O(NlogN)，空间复杂度 O(N)
     int[] heapSort(int[] arr) {
         int[] res = new int[arr.length];
-        MyPriorityQueue pq = new MyPriorityQueue();
+        MyPriorityQueue<Integer> pq = new MyPriorityQueue<>(res.length, (a, b) -> (a - b));
         for (int x : arr)
             pq.push(x);
         // 元素出堆的顺序是有序的

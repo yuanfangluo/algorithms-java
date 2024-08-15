@@ -40,11 +40,12 @@ public class 遍历所有路径 {
         Graph graph;
 
         // 遍历图的所有路径
+
         // 对于图结构来说，由起点 src 到目标节点 dest 的路径可能不止一条。
         // 我们需要一个 onPath 数组，在进入节点时（前序位置）标记为正在访问，退出节点时（后序位置）撤销标记，
         // 这样才能遍历图中的所有路径，从而找到 src 到 dest 的所有路径：
         boolean[] onPath = new boolean[graph.size()];
-        
+
         // 存储路径
         List<Integer> path = new LinkedList<>();
 

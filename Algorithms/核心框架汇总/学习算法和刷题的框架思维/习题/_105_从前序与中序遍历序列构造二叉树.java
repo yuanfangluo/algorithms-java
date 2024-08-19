@@ -2,9 +2,16 @@ package Algorithms.核心框架汇总.学习算法和刷题的框架思维.习�
 
 import Algorithms.Base.TreeNode;
 
-public class _105_根据前序遍历和中序遍历的结果还原一棵二叉树 {
+// https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+public class _105_从前序与中序遍历序列构造二叉树 {
+
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+    }
+
     TreeNode build(int[] preorder, int preStart, int preEnd,
             int[] inorder, int inStart, int inEnd) {
+
         // 前序位置，寻找左右子树的索引
         if (preStart > preEnd) {
             return null;
@@ -12,7 +19,7 @@ public class _105_根据前序遍历和中序遍历的结果还原一棵二叉�
 
         // 根节点的值
         int rootVal = preorder[preStart];
-        
+
         // 在中序遍历中找根节点的位置
         int index = 0;
         for (int i = inStart; i <= inEnd; i++) {
@@ -21,7 +28,7 @@ public class _105_根据前序遍历和中序遍历的结果还原一棵二叉�
                 break;
             }
         }
-        
+
         // 左子树元素的个数
         int leftSize = index - inStart;
 

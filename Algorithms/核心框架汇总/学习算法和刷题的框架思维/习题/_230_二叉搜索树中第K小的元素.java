@@ -2,9 +2,15 @@ package Algorithms.核心框架汇总.学习算法和刷题的框架思维.习�
 
 import Algorithms.Base.TreeNode;
 
-public class _230_寻找二叉搜索树中的第k小的元素 {
+// https://leetcode.cn/problems/kth-smallest-element-in-a-bst/
+public class _230_二叉搜索树中第K小的元素 {
     int res = 0;
     int rank = 0;
+
+    public int kthSmallest(TreeNode root, int k) {
+        traverse(root, k);
+        return res;
+    }
 
     void traverse(TreeNode root, int k) {
         if (root == null) {
@@ -17,7 +23,7 @@ public class _230_寻找二叉搜索树中的第k小的元素 {
             res = root.val;
             return;
         }
-        /*****************/
+
         traverse(root.right, k);
     }
 }

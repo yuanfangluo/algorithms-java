@@ -88,6 +88,7 @@ public class SimpleMinPQ {
 
     // 上浮操作，时间复杂度是树高 O(logN)
     private void swim(int x) {
+        // 如果当前节点的父节点的值大于本身，需要和父节点交换位置
         while (x > 1 && heap[parent(x)] > heap[x]) {
             swap(parent(x), x);
             x = parent(x);
@@ -96,14 +97,17 @@ public class SimpleMinPQ {
 
     // 下沉操作，时间复杂度是树高 O(logN)
     private void sink(int x) {
+
         while (left(x) <= size || right(x) <= size) {
             int min = x;
+            // 先比较左右子节点，哪个更小，就和哪个交换
             if (left(x) <= size && heap[left(x)] < heap[min]) {
                 min = left(x);
             }
             if (right(x) <= size && heap[right(x)] < heap[min]) {
                 min = right(x);
             }
+            // 如果 min 还是 x，说明 x 已经是最小的了，不需要再下沉了
             if (min == x) {
                 break;
             }

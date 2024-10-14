@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import Algorithms.核心框架汇总.动态规划解题套路框架.背包问题.零一背包问题;
+import Algorithms._0_核心框架汇总.动态规划解题套路框架.背包问题.零一背包问题;
 
 public class 优选核酸检测点 {
 

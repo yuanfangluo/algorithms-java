@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import Algorithms.经典数据结构算法.手把手刷数组算法.一个方法团灭nSum问题.两数之和._1_两数之和;
+import Algorithms._1_经典数据结构算法.手把手刷数组算法.一个方法团灭nSum问题.两数之和._1_两数之和;
 
 // https://leetcode.cn/problems/3sum/
 public class _15_三数之和 {

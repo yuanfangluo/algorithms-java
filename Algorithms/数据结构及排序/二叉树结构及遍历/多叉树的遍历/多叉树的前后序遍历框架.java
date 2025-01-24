@@ -1,4 +1,4 @@
-package Algorithms.数据结构及排序.手写标准库中的二叉树结构.多叉树的遍历;
+package Algorithms.数据结构及排序.二叉树结构及遍历.多叉树的遍历;
 
 import Algorithms.Base.Node;
 

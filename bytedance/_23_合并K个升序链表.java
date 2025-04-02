@@ -1,7 +1,7 @@
 
 import java.util.PriorityQueue;
 
-import Algorithms.Base.ListNode;
+import labuladong.Base.ListNode;
 
 // https://leetcode.cn/problems/merge-k-sorted-lists/
 public class _23_合并K个升序链表 {

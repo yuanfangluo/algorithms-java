@@ -1,6 +1,6 @@
 // https://leetcode.cn/problems/remove-linked-list-elements/
 
-import Algorithms.Base.ListNode;
+import labuladong.Base.ListNode;
 
 public class _203_移除链表元素 {
     class Solution1 {

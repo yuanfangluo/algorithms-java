@@ -1,4 +1,4 @@
-import Algorithms.Base.ListNode;
+import labuladong.Base.ListNode;
 // https://leetcode.cn/problems/merge-two-sorted-lists/
 public class _21_合并两个有序链表 {
     class Solution {

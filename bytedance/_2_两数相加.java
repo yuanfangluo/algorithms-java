@@ -1,4 +1,4 @@
-import Algorithms.Base.ListNode;
+import labuladong.Base.ListNode;
 
 // https://leetcode.cn/problems/add-two-numbers/
 public class _2_两数相加 {

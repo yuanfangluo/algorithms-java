@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Algorithms.Base.UF;
+import labuladong.Base.UF;
 
 public class _721_账户合并 {
     class Solution {

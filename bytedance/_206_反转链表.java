@@ -1,4 +1,4 @@
-import Algorithms.Base.ListNode;
+import labuladong.Base.ListNode;
 // https://leetcode.cn/problems/reverse-linked-list/
 public class _206_反转链表 {
     // 思路一：迭代
